@@ -8,5 +8,5 @@
 'use strict';
 
 module.exports = function() {
-  return /(`{3})\s*(\S+)?\s*([\s\S]+?)\s*(`{3})\s*(?:\n+|$)/gm;
+  return /(`{3})[ \t]*(\S+)?[ \t]*([\s\S]+?)\s*\1[ \t]*(?:[^\n]|$)/gm;
 };
