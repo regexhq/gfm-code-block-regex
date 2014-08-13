@@ -8,15 +8,22 @@
 'use strict';
 
 var assert = require('assert');
-var helpers = require('test-helpers')();
-var re = require('..')();
+var helpers = require('test-helpers')({dir: './'});
+var re = require('./')();
 
 describe('code block', function () {
-  it('should return the code block.', function () {
+  it('should return the code blocks from the fixture.', function () {
   	var readme = helpers.readFixture('README.md');
   	var blocks = readme.match(re);
 
-    console.log(blocks)
-    // assert.equal(actual);
+    assert.equal(Array.isArray(blocks), true);
+    assert.equal(blocks.length, 7);
+  });
+
+  it('should get the language from a code block.', function () {
+  	var readme = helpers.readFixture('README.md');
+  	var blocks = readme.match(re);
+  	var lang = RegExp.$2;
+    assert.equal(lang, 'js');
   });
 });
