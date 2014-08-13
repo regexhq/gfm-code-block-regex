@@ -1,6 +1,6 @@
 {
   "name": "gfm-code-block-regex",
-  "description": "RegExp for GitHub Flavored Markdown.",
+  "description": "RegExp for gfm (GitHub Flavored Markdown) code blocks.",
   "version": "0.1.0",
   "homepage": "https://github.com/jonschlinkert/gfm-code-block-regex",
   "author": {
