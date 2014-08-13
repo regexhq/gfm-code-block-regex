@@ -1,7 +1,7 @@
 {
   "name": "gfm-code-block-regex",
   "description": "RegExp for gfm (GitHub Flavored Markdown) code blocks.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/jonschlinkert/gfm-code-block-regex",
   "author": {
     "name": "Jon Schlinkert",
@@ -21,13 +21,39 @@
     }
   ],
   "keywords": [
-    "docs",
-    "documentation",
-    "generate",
-    "generator",
+    "array",
+    "block",
+    "char",
+    "characters",
+    "chars",
+    "code",
+    "escape",
+    "exec",
+    "expression",
+    "fence",
+    "fenced",
+    "fences",
+    "find",
+    "flavor",
+    "flavored",
+    "gfm",
+    "github",
+    "group",
     "markdown",
-    "templates",
-    "verb"
+    "match",
+    "matches",
+    "pattern",
+    "patterns",
+    "re",
+    "regex",
+    "regexp",
+    "regular",
+    "replace",
+    "replacement",
+    "reserved",
+    "special",
+    "str",
+    "string"
   ],
   "main": "index.js",
   "engines": {
@@ -38,6 +64,7 @@
   },
   "devDependencies": {
     "mocha": "*",
-    "test-helpers": "^0.1.2"
+    "test-helpers": "^0.1.2",
+    "verb": "^0.2.15"
   }
 }

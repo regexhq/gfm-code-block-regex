@@ -26,4 +26,10 @@ describe('code block', function () {
   	var lang = RegExp.$2;
     assert.equal(lang, 'js');
   });
+
+  it('should get a code block from a string.', function () {
+  	var blocks = ('\n```js\nfoo\n```\n').match(re);
+  	var lang = RegExp.$2;
+    assert.equal(lang, 'js');
+  });
 });
