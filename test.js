@@ -23,13 +23,26 @@ describe('code block', function () {
   it('should get the language from a code block.', function () {
   	var readme = helpers.readFixture('README.md');
   	var blocks = readme.match(re);
-  	var lang = RegExp.$2;
-    assert.equal(lang, 'js');
+    assert.equal(RegExp.$3, 'js');
   });
 
-  it('should get a code block from a string.', function () {
-  	var blocks = ('\n```js\nfoo\n```\n').match(re);
-  	var lang = RegExp.$2;
-    assert.equal(lang, 'js');
+  it('should get a code block.', function () {
+    var blocks = ('random text \n```js\nfoo\n```\n more random text').match(re);
+    assert.equal(RegExp.$1, '```js\nfoo\n```');
+  });
+
+  it('should get the language from a code block.', function () {
+    var blocks = ('random text \n```js\nfoo\n```\n more random text').match(re);
+    assert.equal(RegExp.$3, 'js');
+  });
+
+  it('should get the code from a code block.', function () {
+    var blocks = ('random text \n```js\nfoo\n```\n more random text').match(re);
+    assert.equal(RegExp.$4, '\nfoo\n');
+  });
+
+  it('should get the trimmed code from a code block.', function () {
+    var blocks = ('random text \n```js\nfoo\n```\n more random text').match(re);
+    assert.equal(RegExp.$5, 'foo');
   });
 });
