@@ -1,7 +1,42 @@
 {
   "name": "gfm-code-block-regex",
-  "version": "0.2.1",
+  "description": "RegExp for gfm (GitHub Flavored Markdown) fenced code blocks.",
+  "repository": "jonschlinkert/gfm-code-block-regex",
+  "license": "MIT",
+  "homepage": "https://github.com/jonschlinkert/gfm-code-block-regex",
+  "authors": [
+    "Jon Schlinkert (https://github.com/jonschlinkert)"
+  ],
   "main": [
     "index.js"
+  ],
+  "devDependencies": {
+    "mocha": "*",
+    "test-helpers": "^0.1.2",
+    "verb": "^0.2.15"
+  },
+  "keywords": [
+    "block",
+    "code",
+    "exec",
+    "expression",
+    "fence",
+    "fenced",
+    "fences",
+    "flavor",
+    "flavored",
+    "gfm",
+    "github",
+    "markdown",
+    "match",
+    "matches",
+    "pattern",
+    "patterns",
+    "re",
+    "regex",
+    "regexp",
+    "regular",
+    "replace",
+    "replacement"
   ]
 }

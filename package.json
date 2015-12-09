@@ -3,23 +3,27 @@
   "description": "RegExp for gfm (GitHub Flavored Markdown) fenced code blocks.",
   "version": "0.2.1",
   "homepage": "https://github.com/jonschlinkert/gfm-code-block-regex",
-  "author": {
-    "name": "Jon Schlinkert",
-    "url": "https://github.com/jonschlinkert"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/jonschlinkert/gfm-code-block-regex.git"
-  },
+  "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
+  "repository": "jonschlinkert/gfm-code-block-regex",
   "bugs": {
     "url": "https://github.com/jonschlinkert/gfm-code-block-regex/issues"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/jonschlinkert/gfm-code-block-regex/blob/master/LICENSE-MIT"
-    }
+  "license": "MIT",
+  "files": [
+    "index.js"
   ],
+  "main": "index.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "test-helpers": "^0.1.2",
+    "verb": "^0.2.15"
+  },
   "keywords": [
     "block",
     "code",
@@ -44,16 +48,9 @@
     "replace",
     "replacement"
   ],
-  "main": "index.js",
-  "engines": {
-    "node": ">=0.10.0"
-  },
-  "scripts": {
-    "test": "mocha -R spec"
-  },
-  "devDependencies": {
-    "mocha": "*",
-    "test-helpers": "^0.1.2",
-    "verb": "^0.2.15"
+  "verb": {
+    "related": {
+      "list": []
+    }
   }
 }
