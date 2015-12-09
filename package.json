@@ -1,7 +1,7 @@
 {
   "name": "gfm-code-block-regex",
   "description": "RegExp for gfm (GitHub Flavored Markdown) fenced code blocks.",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "homepage": "https://github.com/jonschlinkert/gfm-code-block-regex",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
   "repository": "jonschlinkert/gfm-code-block-regex",
@@ -21,8 +21,7 @@
   },
   "devDependencies": {
     "mocha": "*",
-    "test-helpers": "^0.1.2",
-    "verb": "^0.2.15"
+    "test-helpers": "^0.1.4"
   },
   "keywords": [
     "block",
@@ -49,8 +48,15 @@
     "replacement"
   ],
   "verb": {
+    "plugins": [
+      "gulp-format-md"
+    ],
     "related": {
-      "list": []
+      "list": [
+        "to-gfm-code-block",
+        "extract-gfm",
+        "gfm-code-blocks"
+      ]
     }
   }
 }
