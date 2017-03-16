@@ -15,7 +15,7 @@ $ npm install --save gfm-code-block-regex
 ```js
 var re = require('gfm-code-block-regex');
 
-var match = re().exec('random text \n```js\nfoo\n```\n more random text');
+var match = re().exec('foo\n```sh\nnpm install micromatch --save-dev\n```\nbar');
 console.log(match);
 ```
 
