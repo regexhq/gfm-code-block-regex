@@ -1,19 +1,21 @@
 {
   "name": "gfm-code-block-regex",
   "description": "RegExp for gfm (GitHub Flavored Markdown) fenced code blocks.",
-  "repository": "jonschlinkert/gfm-code-block-regex",
+  "version": "0.2.3",
+  "homepage": "https://github.com/regexhq/gfm-code-block-regex",
+  "repository": "regexhq/gfm-code-block-regex",
+  "bugs": {
+    "url": "https://github.com/regexhq/gfm-code-block-regex/issues"
+  },
   "license": "MIT",
-  "homepage": "https://github.com/jonschlinkert/gfm-code-block-regex",
-  "authors": [
-    "Jon Schlinkert (https://github.com/jonschlinkert)"
+  "files": [
+    "index.js"
   ],
   "main": [
     "index.js"
   ],
   "devDependencies": {
-    "mocha": "*",
-    "test-helpers": "^0.1.2",
-    "verb": "^0.2.15"
+    "gulp-format-md": "^0.1.11"
   },
   "keywords": [
     "block",
@@ -38,5 +40,18 @@
     "regular",
     "replace",
     "replacement"
+  ],
+  "authors": [
+    "Jon Schlinkert (https://github.com/jonschlinkert)"
+  ],
+  "ignore": [
+    "actual",
+    "bower_components",
+    "fixtures",
+    "node_modules",
+    "temp",
+    "test",
+    "test.js",
+    "tmp"
   ]
 }

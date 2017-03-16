@@ -2,11 +2,11 @@
   "name": "gfm-code-block-regex",
   "description": "RegExp for gfm (GitHub Flavored Markdown) fenced code blocks.",
   "version": "0.2.3",
-  "homepage": "https://github.com/jonschlinkert/gfm-code-block-regex",
+  "homepage": "https://github.com/regexhq/gfm-code-block-regex",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
-  "repository": "jonschlinkert/gfm-code-block-regex",
+  "repository": "regexhq/gfm-code-block-regex",
   "bugs": {
-    "url": "https://github.com/jonschlinkert/gfm-code-block-regex/issues"
+    "url": "https://github.com/regexhq/gfm-code-block-regex/issues"
   },
   "license": "MIT",
   "files": [
