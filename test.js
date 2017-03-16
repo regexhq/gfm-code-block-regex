@@ -8,41 +8,39 @@
 'use strict';
 
 var assert = require('assert');
-var helpers = require('test-helpers')({dir: './'});
-var re = require('./')();
+var re = require('./');
 
 describe('code block', function () {
   it('should return the code blocks from the fixture.', function () {
-  	var readme = helpers.readFixture('README.md');
-  	var blocks = readme.match(re);
-
-    assert.equal(Array.isArray(blocks), true);
-    assert.equal(blocks.length, 7);
+  	var match = re().exec('foo\n```bash\nnpm i helper-loader --save-dev\n```\nbar');
+    assert(Array.isArray(match));
+    assert.deepEqual(match.slice(), [
+      '```bash\nnpm i helper-loader --save-dev\n```',
+      '```bash\nnpm i helper-loader --save-dev\n```',
+      '```',
+      'bash',
+      '\nnpm i helper-loader --save-dev\n',
+      '```'
+    ]);
   });
 
   it('should get the language from a code block.', function () {
-  	var readme = helpers.readFixture('README.md');
-  	var blocks = readme.match(re);
-    assert.equal(RegExp.$3, 'js');
+    var match = re().exec('foo\n```bash\nnpm i helper-loader --save-dev\n```\nbar');
+    assert.equal(match[3], 'bash');
   });
 
-  it('should get a code block.', function () {
-    var blocks = ('random text \n```js\nfoo\n```\n more random text').match(re);
-    assert.equal(RegExp.$1, '```js\nfoo\n```');
+  it('should get a code block', function () {
+    var match = re().exec('random text \n```js\nfoo\n```\n more random text');
+    assert.equal(match[1], '```js\nfoo\n```');
   });
 
   it('should get the language from a code block.', function () {
-    var blocks = ('random text \n```js\nfoo\n```\n more random text').match(re);
-    assert.equal(RegExp.$3, 'js');
+    var match = re().exec('random text \n```js\nfoo\n```\n more random text');
+    assert.equal(match[3], 'js');
   });
 
   it('should get the code from a code block.', function () {
-    var blocks = ('random text \n```js\nfoo\n```\n more random text').match(re);
-    assert.equal(RegExp.$4, '\nfoo\n');
-  });
-
-  it('should get the trimmed code from a code block.', function () {
-    var blocks = ('random text \n```js\nfoo\n```\n more random text').match(re);
-    assert.equal(RegExp.$5, 'foo');
+    var match = re().exec('random text \n```js\nfoo\n```\n more random text');
+    assert.equal(match[4], '\nfoo\n');
   });
 });

@@ -20,8 +20,7 @@
     "test": "mocha"
   },
   "devDependencies": {
-    "mocha": "*",
-    "test-helpers": "^0.1.4"
+    "gulp-format-md": "^0.1.11"
   },
   "keywords": [
     "block",
@@ -48,15 +47,23 @@
     "replacement"
   ],
   "verb": {
+    "toc": false,
+    "layout": "default",
+    "tasks": [
+      "readme"
+    ],
     "plugins": [
       "gulp-format-md"
     ],
     "related": {
       "list": [
-        "to-gfm-code-block",
         "extract-gfm",
-        "gfm-code-blocks"
+        "gfm-code-blocks",
+        "to-gfm-code-block"
       ]
+    },
+    "lint": {
+      "reflinks": true
     }
   }
 }
